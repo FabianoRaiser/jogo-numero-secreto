@@ -3,12 +3,11 @@ function verificaChuteValorValido(chute){
 
     if (chuteForInvalido(numero)) {
         if (chute.toUpperCase() === "GAME OVER") {
-            document.body.innerHTML = 
-            `
+            document.body.innerHTML = `
             <h2>Game Over!!!</h2>
             <h3>Pressione o botão para jogar novamente</h3>
-            <button id="jogar-novamente" class="btn-jogar" >Jogar Novamente</button>
-            `
+
+            <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button>`
             document.body.style.backgroundColor = "black"
         } else {
             elementoChute.innerHTML += `<div>Valor Inválido</div>`
@@ -54,6 +53,7 @@ function numeroForMaiorOuMenor(numero){
 
 document.body.addEventListener('click', e => {
     if (e.target.id == 'jogar-novamente') {
-        window.location.reload
+        //console.log(e);
+        window.location.reload();
     }
 })
